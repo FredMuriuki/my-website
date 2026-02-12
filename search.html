@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Search Results | Anasi Marketing Ltd</title>
+  <meta name="description" content="Search results on Anasi Marketing Ltd for services, insights, and resources." />
+  <link rel="canonical" href="https://anasimarketing.ltd/search.html" />
+  <meta name="robots" content="noindex,follow" />
+  <meta name="author" content="Anasi Marketing Ltd" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Search Results | Anasi Marketing Ltd" />
+  <meta property="og:description" content="Browse search results on Anasi Marketing Ltd." />
+  <meta property="og:url" content="https://anasimarketing.ltd/search.html" />
+  <meta property="og:image" content="https://anasimarketing.ltd/images/logo-4.png" />
+  <meta property="og:site_name" content="Anasi Marketing Ltd" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Search Results | Anasi Marketing Ltd" />
+  <meta name="twitter:description" content="Browse search results on Anasi Marketing Ltd." />
+  <meta name="twitter:image" content="https://anasimarketing.ltd/images/logo-4.png" />
+
+  <link rel="icon" type="image/png" href="images/Favicon.png" sizes="32x32" />
+  <link rel="shortcut icon" type="image/png" href="images/Favicon.png" sizes="32x32" />
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/style-home-1.css" rel="stylesheet" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <section class="page-title" style="background-image: url(images/background/page-title.jpg);">
+      <div class="auto-container">
+        <div class="title-outer">
+          <h1 class="title">Search Results</h1>
+          <ul class="page-breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Search</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-60 pb-60">
+      <div class="auto-container">
+        <div class="sec-title-h1">
+          <h2 class="title">Search results for: <span id="search-term"></span></h2>
+          <p>Use the search box in the header on any page to search. This page is a basic results placeholder – you can replace this text with real search results later (for example, by integrating Algolia or another search service).</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var term = params.get('search-field') || '';
+      document.getElementById('search-term').textContent = term ? '"' + term + '"' : 'All content';
+    })();
+  </script>
+</body>
+</html>
